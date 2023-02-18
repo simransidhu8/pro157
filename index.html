@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Virtual Posters</title>
+        <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+        <script src= "https://unpkg.com/aframe-event-set-component@4.2.1/dist/aframe-event-set-component.min.js"></script>
+        <script src="./js/Poster.js"></script>
+    </head>
+    
+    <body>
+        <a-scene id="main-scene" background="color: #d6d2f7">
+            <!--Ground-->
+            <a-plane
+                id="ground"
+                color="#826765"
+                width="200"
+                height="100"
+                rotation="-90 0 0">
+            </a-plane>
+
+            <!--Poster Container-->
+            <a-entity
+                id="posters-container"
+                comic-posters>
+            </a-entity>
+
+            <a-camera
+                id="camera"
+                wasd-controls="enabled: false"
+                position="0 10 20">
+            </a-camera>
+
+            <!--Title-->
+            <a-entity
+                id="app-title"
+                position="0 25 -1"
+                text="font: exo2bold; align: center; width:70; color: #000; value: Virtual Comics Store!!"
+            ></a-entity>
+
+            <!--Subtitle-->
+            <a-entity
+                id="app-subtitle"
+                position="0 21 0"
+                text="font: dejavu; align:center; width:20; color: #0F184E; value: Get Your Favourite Comics!"
+            ></a-entity>
+        </a-scene>
+    </body>
+</html>
